@@ -1,0 +1,23 @@
+{% from 'macros/helpers.html' import sprite %}
+
+{%
+set items = [
+{ suptitle: "Взгляд со стороны", title: "Что говорят тебе мимика и жесты?" },
+{ suptitle: "Любовь и секс", title: "Ревнива ли ты?" },
+{ suptitle: "Дом и семья", title: "Счастлива ли ты в браке?" }
+]
+%}
+
+<section class="card side-card side-test bg-gray-750">
+  <header class="side-header card-header pb-0 position-relative">
+    <h5 class="side-title h5 font-weight-normal mb-0 text-white"><a class="text-white stretched-link" href="">Тесты</a></h5>
+  </header>
+  <div class="list-group side-list">
+    {% for item in items %}
+    <div class="list-group-item side-item rounded-0 border-0 bg-transparent position-relative">
+      <small class="side-suptitle text-nowrap text-white-50"><a class="text-white-50" href="">{{ item.suptitle }}</a></small>
+      <h6 class="side-title h5_5 mb-0 text-white"><a class="text-white stretched-link" href="">{{ item.title }}</a></h6>
+    </div>
+    {% endfor %}
+  </div>
+</section>

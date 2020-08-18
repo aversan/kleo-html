@@ -1,0 +1,41 @@
+{% from 'macros/helpers.html' import sprite %}
+
+<section class="side-card card side-two-opitions bg-gray-750">
+  <header class="side-header card-header d-flex align-items-end position-relative">
+    <h5 class="side-title h5 font-weight-normal mb-0 text-primary">Два мнения</h5>
+    <small class="side-more text-white-50">
+      <a class="side-link text-white-50 stretched-link" href="">Читать все</a>
+    </small>
+  </header>
+  <div class="position-relative">
+    <img class="side-image card-img" src="http://sandbox4.kleo.ru/crop/dual/270x108/9457-600x240.jpeg" alt="">
+    <div class="card-body side-body">
+      <div class="rating-container d-flex align-items-center flex-nowrap mb-2_25">
+        <div class="rating">
+          <i class="rating-action icon rating-icon is-over" data-feather="star"></i>
+          <i class="rating-action icon rating-icon is-over" data-feather="star"></i>
+          <i class="rating-action icon rating-icon is-over" data-feather="star"></i>
+          <i class="rating-action icon rating-icon is-over" data-feather="star"></i>
+          <i class="rating-action icon rating-icon" data-feather="star"></i>
+        </div>
+        <small class="rating-text ml-3 text-white-50">4 из 5</small>
+      </div>
+      <h6 class="side-title h5_5 mb-0"><a class="side-link text-white stretched-link" href="">Мой мужчина меня использует и не уходит</a></h6>
+      <div class="side-meta d-flex flex-nowrap mt-2_25">
+        <span class="side-meta-item d-inline-flex items-center mr-3">
+          {{ sprite('female', '0 0 1 1', 'side-icon text-pink mr-1') }}
+          <span class="text-white font-weight-medium">69%</span>
+        </span>
+          <span class="side-meta-item d-inline-flex items-center mr-3">
+          {{ sprite('male', '0 0 1 1', 'side-icon text-blue mr-1') }}
+          <span class="text-white font-weight-medium">31%</span>
+        </span>
+        <div class="flex-grow-1"></div>
+        <a class="side-meta-item d-inline-flex items-center" href="/items/dual/2mn-on-nachal-schitat-vo-skolko-obhodjatsja-vstrechi.shtml#comments">
+          {{ sprite('text', '0 0 1 1', 'side-icon text-white-50 mr-1') }}
+          <span class="text-white">59</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

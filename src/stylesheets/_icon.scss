@@ -1,0 +1,40 @@
+.icon {
+  display: inline-flex;
+  vertical-align: middle;
+  fill: currentColor;
+
+  &.-female {
+    margin-top: .15rem;
+  }
+
+  &.-male {
+    margin-top: -.15rem;
+  }
+}
+
+.icon-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon[data-badge] {
+  position: relative;
+
+  &::after {
+    content: attr(data-badge);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.125rem;
+    height: 1.125rem;
+    line-height: 1.125rem;
+    border-radius: 1.5rem;
+    font-size: .6875rem;
+    font-weight: bold;
+    position: absolute;
+    right: -.5625rem;
+    top: -.5625rem;
+    background-color: $pink-dark;
+    color: $white;
+  }
+}

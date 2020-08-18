@@ -1,0 +1,42 @@
+{% from 'macros/helpers.html' import sprite %}
+
+{%
+set items = [
+{ icon:"aries", text: "Овен" },
+{ icon:"taurus", text: "Телец" },
+{ icon:"gemini", text: "Близнецы" },
+{ icon:"cancer", text: "Рак" },
+{ icon:"leo", text: "Лев" },
+{ icon:"virgo", text: "Дева" },
+{ icon:"libra", text: "Весы" },
+{ icon:"scorpio", text: "Скорпион" },
+{ icon:"sagittarius", text: "Стрелец" },
+{ icon:"capricorn", text: "Козерог" },
+{ icon:"aquarius", text: "Водолей" },
+{ icon:"fishes", text: "Рыбы" }
+]
+%}
+
+<section class="card side-card side-horoscope bg-gray-725">
+  <header class="side-header card-header d-flex align-items-end pb-0 position-relative">
+    <h5 class="side-title h5 font-weight-normal mb-0 text-white"><a class="text-white stretched-link" href="">Гороскоп</a></h5>
+  </header>
+  <div class="list-group side-list">
+    {% for item in items %}
+    <div class="list-group-item d-flex align-items-center side-item rounded-0 border-0 bg-transparent position-relative">
+        <span class="rounded-circle bg-primary text-white mr-2_25 side-icon-wrapper d-flex align-items-center justify-content-center">
+          {{ sprite(item.icon, '0 0 1 1', 'side-icon') }}
+        </span>
+      <div class="primary-content flex-fill text-truncate text-white">
+        <a class="text-truncate text text-white stretched-link" href="">{{ item.text }}</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <footer class="side-footer card-footer position-relative bg-gray-650">
+    <a class="side-link text-gray-200 stretched-link d-flex align-items-center flex-nowrap" href="">
+      Получить персональный гороскоп от Стейси Майзерандо
+      {{ sprite('chevron-right', '0 0 1 1', 'side-icon flex-shrink-0') }}
+    </a>
+  </footer>
+</section>

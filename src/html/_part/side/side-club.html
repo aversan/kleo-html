@@ -1,0 +1,42 @@
+{% from 'macros/helpers.html' import sprite %}
+
+{%
+set items = [
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" },
+{ avatar: "http://placehold.it/40x40" }
+]
+%}
+
+  <section class="card side-card side-club bg-gray-750">
+  <header class="side-header card-header d-flex align-items-end pb-0 position-relative">
+    <h5 class="side-title h5 font-weight-normal mb-0 text-white"><a class="text-white stretched-link" href="">Клуб на клео</a></h5>
+    <div class="side-meta d-flex flex-nowrap pl-2">
+        <span class="side-meta-item d-inline-flex items-center ml-2">
+          {{ sprite('female', '0 0 1 1', 'side-icon text-pink mr-1') }}
+          <span class="text-white font-weight-medium">21637</span>
+        </span>
+        <span class="side-meta-item d-inline-flex items-center ml-2">
+          {{ sprite('male', '0 0 1 1', 'side-icon text-blue mr-1') }}
+          <span class="text-white font-weight-medium">3840</span>
+        </span>
+    </div>
+  </header>
+  <div class="side-avatar-container">
+    {% for item in items %}
+    <a href=""><img class="side-avatar rounded-circle" src="{{ item.avatar }}" alt=""></a>
+    {% endfor %}
+    <a class="text-gray-200" href=""><i class="side-icon side-icon-add" data-feather="plus-circle"></i></a>
+  </div>
+</section>

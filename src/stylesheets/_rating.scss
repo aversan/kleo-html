@@ -1,0 +1,29 @@
+.rating {
+  display: flex;
+
+  .rating-action {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+
+    &.rating-icon {
+      transform: scale(.9);
+    }
+  }
+
+  .rating-icon {
+    fill: #E4DCD6;
+    stroke: #E4DCD6;
+
+    &.is-over {
+      fill: $orange;
+      stroke: $orange;
+    }
+  }
+}
+
+.rating-container {
+  .rating-text {
+    font-size: .625rem;
+  }
+}

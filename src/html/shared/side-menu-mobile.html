@@ -1,0 +1,119 @@
+{%
+set topItems = [
+{
+text: "Новости"
+},
+{
+text: "Два мнения"
+},
+{
+text: "Консультации"
+},
+{
+text: "Коллекции"
+},
+{
+text: "Фазы луны"
+}
+]
+%}
+
+
+{%
+set moreItems = [
+{
+icon: "two-opinions",
+text: "Два мнения",
+link: "/items/dual/"
+},
+{
+icon: "horoscope",
+text: "Гороскопы",
+link: "/horoscope/"
+},
+{
+icon: "blogs",
+text: "Блоги",
+link: "/blogs/"
+},
+{
+icon: "video",
+text: "Видео",
+link: "/video/"
+},
+{
+icon: "kleo-battle",
+text: "Клео Баттл",
+link: "/items/battle/"
+},
+{
+icon: "couples",
+text: "Звездные пары",
+link: "/items/couples/"
+},
+{
+icon: "kleoteka",
+text: "Клеотека",
+link: "/encyclopedia/"
+},
+{
+icon: "test",
+text: "Тесты",
+link: ""
+},
+{
+icon: "cards",
+text: "Открытки",
+link: ""
+},
+{
+icon: "dreams",
+text: "Сонник",
+link: ""
+}
+]
+%}
+
+{%
+set bottomItems = [
+{
+text: "Дом"
+},
+{
+text: "Рецепты"
+},
+{
+text: "Здоровье"
+},
+{
+text: "Мода"
+},
+{
+text: "Красота"
+},
+{
+text: "Слухи"
+},
+{
+text: "О тебе"
+},
+{
+text: "Любовь"
+},
+{
+text: "Семья"
+}
+]
+%}
+
+<div class="side-menu-mobile bg-dark d-lg-none">
+  <div class="side-menu-scrollable d-flex flex-column justify-content-between h-100">
+    <div class="flex-fill">
+      {% include "_part/side-menu/side-menu-search.html" %}
+      {% include "_part/side-menu/side-menu-items.html" %}
+    </div>
+    <div class="side-menu-footer flex-shrink-0">
+      {% include "_part/side-menu/side-menu-social.html" %}
+    </div>
+  </div>
+</div>

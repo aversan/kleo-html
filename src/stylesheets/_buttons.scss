@@ -1,0 +1,87 @@
+.btn-quad {
+  width: auto;
+  height: $input-height;
+  min-width: $input-height;
+  padding-left: $input-padding-y;
+  padding-right: $input-padding-y;
+
+  &.btn-sm {
+    width: auto;
+    height: $input-height-sm;
+    min-width: $input-height-sm;
+    padding-left: $input-padding-y-sm;
+    padding-right: $input-padding-y-sm;
+  }
+}
+
+.btn-icon-right,
+.btn-icon-left {
+  position: relative;
+
+  .btn-icon-wrapper {
+    width: $input-height;
+    height: $input-height;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feather,
+  .icon {
+    width: .875rem;
+    height: .875rem;
+  }
+}
+
+.btn-icon-right {
+  padding-right: $input-height;
+
+  .btn-icon-wrapper {
+    right: 0;
+  }
+}
+
+.btn-icon-left {
+  padding-left: $input-height;
+
+  .btn-icon-wrapper {
+    left: 0;
+  }
+}
+
+
+.btn-only-icon {
+  @extend .btn-quad;
+  position: relative;
+
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .icon,
+  .feather {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn-sm {
+  .icon,
+  .feather {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+}
+
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  color: inherit;
+}

@@ -1,0 +1,56 @@
+{%
+set items = [
+{
+title: "Партнерам",
+list: ["Рекламодателям", "Контакты", "Редакция", "Блог редакции", "Пользовательское соглашение", "Политика конфиденциальности", "Условия использования материалов"]
+},
+{
+title: "Конкурсы",
+list: ["Блиц", "Фото", "Литконкурс"]
+},
+{
+title: "Для тебя",
+list: ["О тебе", "Мода", "Красота", "Здоровье", "Мода", "Любовь", "Дом", "Дети", "Бомонд", "Новости", "Клуб", "Тесты", "Консультации", "Гороскопы", "Форум", "Открытки", "Сонник", "Два мнения"]
+}
+]
+%}
+
+<footer class="footer container px-3 px-md-4 px-lg-4_5 py-4_5">
+  <div class="footer-nav-container">
+    <nav class="footer-nav">
+      <h6 class="footer-title h6_5 text-uppercase mb-0 text-muted"><a class="text-muted" href="">{{items[0].title}}</a></h6>
+      <ul class="footer-list list-unstyled pt-2 pb-3_5 mb-0">
+        {% for item in items[0].list %}
+        <li class="footer-item my-1"><a class="footer-link text-muted" href="">{{ item }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="footer-nav">
+      <h6 class="footer-title h6_5 text-uppercase mb-0 text-muted"><a class="text-muted" href="">{{items[1].title}}</a></h6>
+      <ul class="footer-list list-unstyled pt-2 pb-3_5 mb-0">
+        {% for item in items[1].list %}
+        <li class="footer-item my-1"><a class="footer-link text-muted" href="">{{ item }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="footer-nav">
+      <h6 class="footer-title h6_5 text-uppercase mb-0 text-muted"><a class="text-muted" href="">{{items[2].title}}</a></h6>
+      <ul class="footer-list list-unstyled pt-2 pb-3_5 mb-0">
+        {% for item in items[2].list %}
+        <li class="footer-item my-1"><a class="footer-link text-muted" href="">{{ item }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-caption-container text-center">
+    <h6 class="h6_5 footer-caption-title font-weight-normal text-gray-625 mb-2_25">Kleo.ru</h6>
+    <p class="caption footer-caption text-gray-550">Все права на материалы, размещенные в женском интернет-журнале «Клео.ру», защищены законодательством об авторском праве и смежных правах. Материалы женского портала не могут быть использованы без активной ссылки на источник «Клео.ру». За содержание рекламных материалов на женском сайте редакция ответственности не несет. Пользователь сайта kleo.ru гарантирует, что размещение представленных им материалов не нарушает права третьих лиц (включая, но не ограничиваясь авторскими правами), не наносит ущерба их чести и достоинству. Пользователь сайта kleo.ru, отправляя материалы, тем самым заинтересован в их публикации на сайте и выражает свое согласие на их дальнейшее использование владельцами сайта kleo.ru.</p>
+    <p class="caption footer-caption text-gray-550">Сетевое издание «KLEO.RU» (Клео.РУ) Свидетельство о регистрации СМИ ЭЛ № ФС 77-74583, выдано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 14 декабря 2018 года. 16+</p>
+    <p class="caption footer-caption text-gray-550 d-flex flex-column">
+      <span>Учредитель: ИП Исмагилов Евгений Рамильевич</span>
+      <span>Главный редактор: Исмагилов Евгений Рамильевич</span>
+      <span>Контактные данные редакции для государственных органов (в том числе, для Роскомнадзора): in@kleo.ru, +79677638370</span>
+    </p>
+    <p class="caption footer-caption text-gray-550">Адрес редакции: г.Самара, ул пер.Тургенева дом 7 офис 74.</p>
+  </div>
+</footer>

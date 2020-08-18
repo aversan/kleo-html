@@ -1,0 +1,39 @@
+{% from 'macros/helpers.html' import sprite %}
+
+{%
+set items = [
+{
+icon: "instagram-circle",
+title: "Инстаграм",
+link: "https://www.instagram.com/kleo_ru_/"
+},
+{
+icon: "youtube-circle",
+title: "Ютуб",
+link: "https://www.youtube.com/channel/UCbhMvVYYuLss2R0UjYhlriQ"
+},
+{
+icon: "vkontakte-circle",
+title: "Вконтакте",
+link: "https://vk.com/kleoru"
+},
+{
+icon: "facebook-circle",
+title: "Фейсбук",
+link: "https://www.facebook.com/kleo.ru"
+},
+{
+icon: "ok-circle",
+title: "Одноклассники",
+link: "https://ok.ru/kleo"
+}
+]
+%}
+
+<div class="header-social d-inline-flex align-items-center m-n1">
+  {% for item in items %}
+  <a class="header-social-link text-white" href="{{item.link}}" rel="nofollow" target="_blank" title="{{item.title}}">
+    {{ sprite(item.icon, '0 0 1 1', 'header-social-icon icon m-1') }}
+  </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,42 @@
+{%
+set title = 'Краткая информация о Светлане Лободе'
+%}
+
+{%
+set img = 'http://sandbox4.kleo.ru//img/stars/21/svetlanaloboda_00.jpg'
+%}
+
+{%
+set items = [
+{ title: "Имя:", text: "Светлана Лобода" },
+{ title: "Отчество:", text: "Сергеевна" },
+{ title: "День рождения:", text: "18.10.1982" },
+{ title: "Возраст:", text: "37 лет" },
+{ title: "Место рождения:", text: "Киев" },
+{ title: "Рост:", text: "174 см" },
+{ title: "Вес:", text: "48 кг" },
+{ title: "Знак зодиака:", text: "Весы" },
+{ title: "Восточный гороскоп:", text: "Собака" },
+{ title: "Деятельность:", text: "певица" }
+]
+%}
+
+<article class="person-info px-3 px-md-4 px-lg-4_5 py-4_5 bg-person-info mx-n3 mx-md-n4 mx-lg-0">
+  <h5 class="h5_5 mb-4 person-info-title">{{ title }}</h5>
+  <div class="person-info-row row no-gutters">
+    <div class="col-12 col-sm-6 col-md-5 col-lg-4 pr-sm-2_75">
+      <img class="img-fluid" src="{{ img }}" alt="">
+    </div>
+    <div class="col-12 col-sm-6 col-md-7 col-lg-8 pl-sm-2_75 d-flex flex-column">
+      <ul class="list-unstyled person-info-list mb-0 pt-4 pt-sm-0 pb-2_5 flex-grow-1">
+        {% for item in items %}
+        <li class="person-info-item mb-2_5">
+          <span class="font-weight-light">{{ item.title }}</span>
+          <span class="font-weight-medium">{{ item.text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% include "_part/news/person-info-social.html" %}
+    </div>
+  </div>
+</article>

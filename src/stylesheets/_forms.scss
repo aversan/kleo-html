@@ -1,0 +1,17 @@
+.form-control-search {
+  background-color: $white-10;
+  border-color: $white-20;
+  color: $white-80;
+  box-shadow: none;
+
+  &:focus {
+    background-color: $white-10;
+    border-color: $white-20;
+    color: $white-80;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $white-80;
+  }
+}

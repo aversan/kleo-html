@@ -1,0 +1,135 @@
+{% from 'macros/helpers.html' import sprite %}
+
+{%
+set topItems = [
+{
+text: "Новости",
+link: ""
+},
+{
+text: "Два мнения",
+link: ""
+},
+{
+text: "Консультации",
+link: ""
+},
+{
+text: "Коллекции",
+link: ""
+},
+{
+text: "Фазы луны",
+link: ""
+}
+]
+%}
+
+
+{%
+set moreItems = [
+{
+icon: "two-opinions",
+text: "Два мнения",
+link: "/items/dual/"
+},
+{
+icon: "horoscope",
+text: "Гороскопы",
+link: "/horoscope/"
+},
+{
+icon: "blogs",
+text: "Блоги",
+link: "/blogs/"
+},
+{
+icon: "video",
+text: "Видео",
+link: "/video/"
+},
+{
+icon: "kleo-battle",
+text: "Клео Баттл",
+link: "/items/battle/"
+},
+{
+icon: "couples",
+text: "Звездные пары",
+link: "/items/couples/"
+},
+{
+icon: "kleoteka",
+text: "Клеотека",
+link: "/encyclopedia/"
+},
+{
+icon: "test",
+text: "Тесты",
+link: ""
+},
+{
+icon: "cards",
+text: "Открытки",
+link: ""
+},
+{
+icon: "dreams",
+text: "Сонник",
+link: ""
+}
+]
+%}
+
+{%
+set bottomItems = [
+{
+text: "Дом",
+link: ""
+},
+{
+text: "Рецепты",
+link: ""
+},
+{
+text: "Здоровье",
+link: ""
+},
+{
+text: "Мода",
+link: ""
+},
+{
+text: "Красота",
+link: ""
+},
+{
+text: "Слухи",
+link: ""
+},
+{
+text: "О тебе",
+link: ""
+},
+{
+text: "Любовь",
+link: ""
+},
+{
+text: "Семья",
+link: ""
+}
+]
+%}
+
+<div class="side-menu-items d-flex flex-column">
+{% for item in bottomItems %}
+<a class="side-menu-item text-white pl-3 pl-md-4 py-2" href="{{ item.link }}">{{ item.text }}</a>
+{% endfor %}
+{% for item in topItems %}
+<a class="side-menu-item text-white pl-3 pl-md-4 py-2" href="{{ item.link }}">{{ item.text }}</a>
+{% endfor %}
+{% for item in moreItems %}
+<a class="side-menu-item text-white pl-3 pl-md-4 py-2" href="{{ item.link }}">{{ item.text }}</a>
+{% endfor %}
+</div>

@@ -1,0 +1,19 @@
+.col-section {
+}
+
+.col-side {
+  //@include media-breakpoint-up('md') {
+  //  flex: 0 1 320px;
+  //  max-width: 320px;
+  //}
+}
+
+
+.container {
+  max-width: 992px;
+}
+
+
+.container-min-width {
+  min-width: 320px;
+}

@@ -1,0 +1,32 @@
+{%
+set items = [
+{
+icon: "facebook",
+title: "Светлана Лабода в Фейсбук",
+link: ""
+},
+{
+icon: "instagram",
+title: "Светлана Лабода в Инстаграм",
+link: ""
+},
+{
+icon: "twitter",
+title: "Светлана Лабода в Твиттер",
+link: ""
+},
+{
+icon: "wikipedia",
+title: "Светлана Лабода в Википедиа",
+link: ""
+}
+]
+%}
+
+<div class="person-info-social d-inline-flex align-items-center m-n1">
+  {% for item in items %}
+  <a class="person-info-social-link" href="{{item.link}}" rel="nofollow" target="_blank" title="{{item.title}}">
+    <img class="person-info-social-icon m-1" src="images/icons/{{item.icon}}.png" width="34" height="34" alt="">
+  </a>
+  {% endfor %}
+</div>

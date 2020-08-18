@@ -1,0 +1,21 @@
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+  <div class="container px-0">
+    <div class="row no-gutters">
+      <div class="col-12 col-lg-8 col-section px-3 px-md-4 px-lg-2_25">
+        {% include "_part/news/article.html" %}
+        {% include "_part/news/person-info.html" %}
+      </div>
+      <div class="col-12 col-lg-4 col-side pl-lg-2_25">
+        {% include "_part/side/side-two-opinions.html" %}
+        {% include "_part/side/side-horoscope.html" %}
+        {% include "_part/side/side-poll.html" %}
+        {% include "_part/side/side-consult.html" %}
+        {% include "_part/side/side-test.html" %}
+        {% include "_part/side/side-club.html" %}
+        {% include "_part/side/side-news.html" %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

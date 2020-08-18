@@ -1,0 +1,117 @@
+.h3_5,
+.h5_5,
+.h6_5 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.h3_5 {
+  @include font-size($h3_5-font-size);
+}
+
+.h5_5 {
+  @include font-size($h5_5-font-size);
+}
+
+.h6_5 {
+  @include font-size($h6_5-font-size);
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.caption {
+  font-size: .8125rem;
+  line-height: normal;
+  letter-spacing: 0.02rem;
+}
+
+
+// base list
+
+//.typo-list {
+//  @include list-unstyled();
+//
+//  > li {
+//    position: relative;
+//    min-height: 1.5rem;
+//    margin-top: .375rem;
+//    margin-bottom: .375rem;
+//
+//    &::before {
+//      display: block;
+//      width: 1.5rem;
+//      height: 1.5rem;
+//      overflow: hidden;
+//      position: absolute;
+//      left: 0;
+//      top: .25rem;
+//    }
+//  }
+//
+//  &-primary > li::before {
+//    color: $purple;
+//    border-color: $purple-light;
+//  }
+//}
+
+
+// outline number list
+
+//.typo-list-number-outline {
+//  @extend .typo-list;
+//  counter-reset: decimal;
+//
+//  > li {
+//    counter-increment: decimal;
+//    padding-left: 2.125rem;
+//
+//    &::before {
+//      content: counter(decimal);
+//      border-radius: 50rem;
+//      line-height: calc(1.5rem - 2px);
+//      @include font-size(.9375rem);
+//      text-align: center;
+//      border-style: solid;
+//      border-width: 1px;
+//    }
+//  }
+//}
+
+
+// dash list
+
+//.typo-list-dash {
+//  @extend .typo-list;
+//
+//  > li {
+//    padding-left: 1.5625rem;
+//
+//    &::before {
+//      content: '—';
+//      line-height: calc(1.5rem - 1px);
+//      @include font-size(1.25rem);
+//    }
+//  }
+//}
+
+
+// circle list
+
+////.typo-list-circle {
+////  @extend .typo-list;
+////
+////  > li {
+////    padding-left: 1.25rem;
+////
+////    &::before {
+////      content: '●';
+////      line-height: calc(1.5rem - 1px);
+////      @include font-size(1.25rem);
+////    }
+////  }
+//}

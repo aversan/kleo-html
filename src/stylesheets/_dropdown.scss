@@ -1,0 +1,14 @@
+.dropdown-item-w-icon {
+  padding-left: 0;
+  position: relative;
+  min-height: 2rem;
+  @include text-truncate();
+
+  .dropdown-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -$dropdown-item-padding-y;
+    margin-bottom: -$dropdown-item-padding-y;
+    transform: scale(.5);
+  }
+}

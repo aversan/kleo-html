@@ -1,0 +1,50 @@
+.article-top {
+  line-height: 1;
+
+  .article-top-prev,
+  .article-top-action {
+    display: inline-flex;
+    align-items: center;
+    font-size: .875rem;
+  }
+}
+
+.article-text {
+  line-height: 1.5;
+  font-weight: $font-weight-light;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @include font-size($h4-font-size);
+    @extend .mb-3_5;
+
+    @media (max-width: 379.98px) {
+      @include font-size($h5-font-size);
+    }
+  }
+
+  ul,
+  ol {
+    @include list-unstyled();
+  }
+
+  ul,
+  ol,
+  li {
+    @extend .mb-3_5;
+    @extend .mb-sm-2_5;
+  }
+
+  p {
+    @extend .mb-3_5;
+    @extend .mb-sm-2_5;
+  }
+
+  img {
+    @extend .img-fluid;
+  }
+}
+

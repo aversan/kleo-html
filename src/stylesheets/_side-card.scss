@@ -1,0 +1,250 @@
+$side-card-padding: 1.75rem;
+$side-card-avatar-size: 2.5rem;
+$side-card-icon-wrapper-size: 2.5rem;
+$side-card-icon-size: 1.5rem;
+
+// side card
+
+.side-card {
+  margin-top: .625rem;
+  margin-bottom: .625rem;
+
+  .side-header,
+  .side-body,
+  .side-footer {
+    @include media-breakpoint-down('md') {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .side-more {
+    font-size: .875rem;
+    padding-left: .25rem;
+
+    &::before {
+      display: inline-block;
+      padding-right: .25rem;
+      color: inherit;
+      content: '/';
+    }
+  }
+
+  .side-date,
+  .side-suptitle {
+    font-size: .625rem;
+    text-transform: uppercase;
+    margin-bottom: .3125rem;
+    margin-top: -.1875rem;
+    display: block;
+  }
+
+  .side-icon-wrapper {
+    width: $side-card-icon-wrapper-size;
+    height: $side-card-icon-wrapper-size;
+  }
+
+  .side-icon {
+    width: $side-card-icon-size;
+    height: $side-card-icon-size;
+  }
+
+  .side-meta-item {
+    font-size: .75rem;
+    line-height: 1.25rem;
+
+    .side-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      transform: scale(.9);
+    }
+  }
+
+  .side-footer {
+    .side-link {
+      font-size: .875rem;
+    }
+  }
+
+  .side-avatar {
+    width: $side-card-avatar-size;
+    height: $side-card-avatar-size;
+  }
+
+  .side-list {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+  }
+
+  .side-item {
+    padding: .625rem 1.75rem;
+
+    @include media-breakpoint-down('md') {
+      padding-left: 1.5rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 1rem;
+    }
+  }
+
+  .side-action,
+  a.side-meta-item,
+  .side-suptitle a,
+  .side-avatar-wrapper a {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+// horoscope
+
+.side-horoscope {
+  .side-item {
+    padding: .3125rem .625rem;
+
+    .text {
+      font-size: .875rem;
+    }
+  }
+
+  .side-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 260px));
+    padding-top: 1.4375rem;
+    padding-bottom: 1.4375rem;
+
+    .side-item {
+      &:nth-child(odd) {
+        padding-left: $side-card-padding;
+
+        @include media-breakpoint-down('md') {
+          padding-left: 1.5rem;
+        }
+
+        @include media-breakpoint-down('sm') {
+          padding-left: 1rem;
+        }
+      }
+
+      &:nth-child(even) {
+        padding-right: $side-card-padding;
+
+        @include media-breakpoint-down('md') {
+          padding-right: 1.5rem;
+        }
+
+        @include media-breakpoint-down('sm') {
+          padding-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .side-footer {
+    min-height: 4.375rem;
+    padding-right: 0;
+
+    .side-icon {
+      width: 4.375rem;
+      height: 4.375rem;
+      transform: scale(.5);
+      margin-top: -1.25rem;
+      margin-bottom: -1.25rem;
+    }
+  }
+}
+
+
+// poll
+
+.side-poll {
+  .side-radio-container {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+
+    .side-radio,
+    .side-checkbox {
+      margin-top: .625rem;
+      margin-bottom: .625rem;
+
+      .custom-control-label,
+      .custom-control-label {
+        font-size: .875rem;
+      }
+    }
+  }
+
+  .side-btn {
+    .btn-text {
+      font-size: .875rem;
+    }
+  }
+}
+
+
+// club
+
+.side-club {
+  .side-avatar-container {
+    display: grid;
+    grid-template-columns: repeat(5, 2.5rem);
+    grid-gap: .625rem;
+    justify-content: space-between;
+    padding: $side-card-padding;
+
+    @include media-breakpoint-down('md') {
+      padding-left: 1.5rem;
+    }
+
+    @include media-breakpoint-down('sm') {
+      padding-left: 1rem;
+    }
+  }
+
+  .side-icon-add {
+    width: $side-card-avatar-size;
+    height: $side-card-avatar-size;
+  }
+}
+
+
+// test
+
+.side-test {
+  .side-list {
+    padding-top: .5rem;
+    padding-bottom: .75rem;
+
+    .side-item {
+      padding-top: 1.25rem;
+      padding-bottom: 1rem;
+    }
+
+    .side-item + .side-item::before {
+      content: "";
+      position: absolute;
+      left: 1.75rem;
+      right: 1.75rem;
+      height: 1px;
+      top: 0;
+      background-color: $white-20;
+
+      @include media-breakpoint-down('md') {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+
+      @include media-breakpoint-down('sm') {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}

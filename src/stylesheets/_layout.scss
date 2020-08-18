@@ -1,0 +1,113 @@
+.layout {
+  //.side-menu-wrapper {
+  //  background: rgba(36, 39, 57, 0.6);
+  //
+  //  @include media-breakpoint-up('lg') {
+  //    width: 256px;
+  //    flex-shrink: 0;
+  //  }
+  //}
+}
+
+.side-menu-scrollable {
+  padding-right: 30px;
+  width: calc(100% + 30px);
+  overflow-y: auto;
+}
+
+//.side-menu-desktop {
+//  overflow: hidden;
+//  top: 0;
+//  position: sticky;
+//  width: 256px;
+//
+//  @include media-breakpoint-down('lg') {
+//    position: fixed;
+//    z-index: 100;
+//    bottom: 0;
+//    transform: translateX(-100%);
+//    background: #242739;
+//    transition: transform 0.15s;
+//  }
+//
+//  &-opened {
+//    @include media-breakpoint-down('lg') {
+//      transform: translateX(0);
+//    }
+//  }
+//}
+
+.side-menu-mobile {
+  overflow: hidden;
+  width: 320px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  background: #242739;
+  transition: transform 0.25s;
+  z-index: 100;
+
+  @media (max-width: 320px) {
+    width: 256px;
+  }
+
+  &-opened {
+    transform: translateX(0);
+  }
+}
+
+.side-menu-social {
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.side-menu-search {
+  width: 2rem;
+  margin-right: 0;
+  clip: rect(0,0,0,0);
+  @include transition($transition-base);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+
+  &.expand-search {
+    width: 100%;
+  }
+}
+
+.content-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  cursor: default;
+  pointer-events: none;
+
+  &-visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+    background-color: rgba(18,21,38, .65);
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    @include media-breakpoint-down('lg') {
+      position: fixed;
+    }
+  }
+}
+
+.no-scrollable {
+  @include media-breakpoint-down('md') {
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
